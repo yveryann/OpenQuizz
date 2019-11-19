@@ -58,16 +58,48 @@
 		8874FA7C2382C18500834E69 /* OpenQuizz */ = {
 			isa = PBXGroup;
 			children = (
+				8874FA962383C42400834E69 /* Supporting Files */,
+				8874FA932383C3C400834E69 /* Model */,
+				8874FA942383C3D400834E69 /* View */,
+				8874FA952383C3DF00834E69 /* Controler */,
+			);
+			path = OpenQuizz;
+			sourceTree = "<group>";
+		};
+		8874FA932383C3C400834E69 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8874FA942383C3D400834E69 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8874FA832382C18500834E69 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8874FA952383C3DF00834E69 /* Controler */ = {
+			isa = PBXGroup;
+			children = (
+				8874FA812382C18500834E69 /* ViewController.swift */,
+			);
+			path = Controler;
+			sourceTree = "<group>";
+		};
+		8874FA962383C42400834E69 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				8874FA7D2382C18500834E69 /* AppDelegate.swift */,
 				8874FA7F2382C18500834E69 /* SceneDelegate.swift */,
-				8874FA812382C18500834E69 /* ViewController.swift */,
 				8874FA912382C20200834E69 /* Balham.otf */,
-				8874FA832382C18500834E69 /* Main.storyboard */,
 				8874FA862382C18500834E69 /* Assets.xcassets */,
 				8874FA882382C18500834E69 /* LaunchScreen.storyboard */,
 				8874FA8B2382C18500834E69 /* Info.plist */,
 			);
-			path = OpenQuizz;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
