@@ -95,7 +95,26 @@ class ViewController: UIViewController {
         
         scoreLabel.text = "\(game.score) / 10"
         
+        
+        let screenWidth = UIScreen.main.bounds.width
+        var translationTransform : CGAffineTransform
+        if questionView.style == .correct {
+            translationTransform = CGAffineTransform(translationX: screenWidth, y:0)
+        } else {
+            translationTransform = CGAffineTransform(translationX: -screenWidth, y: 0)
+        }
+        UIView.animate(withDuration: 0.3, animations: {
+            self.questionView.transform = translationTransform
+        }) { (success) in
+            if success {
+                self.showQuestionView()
+            }
+        }
+    }
+    
+    private func showQuestionView() {
         questionView.transform = .identity
+        questionView.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
         questionView.style = .standard
         questionView.title = game.currentQuestion.title
         
@@ -105,6 +124,9 @@ class ViewController: UIViewController {
         case .over:
             questionView.title = "Game Over"
         }
+        UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
+            self.questionView.transform = .identity
+        }, completion: nil)
     }
 }
 
