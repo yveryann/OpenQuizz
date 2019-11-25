@@ -14,6 +14,10 @@
 		8874FA872382C18500834E69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8874FA862382C18500834E69 /* Assets.xcassets */; };
 		8874FA8A2382C18500834E69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8874FA882382C18500834E69 /* LaunchScreen.storyboard */; };
 		8874FA922382C20200834E69 /* Balham.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8874FA912382C20200834E69 /* Balham.otf */; };
+		8874FA982383C92E00834E69 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8874FA972383C92E00834E69 /* Question.swift */; };
+		8874FA9A2383C93D00834E69 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8874FA992383C93D00834E69 /* Game.swift */; };
+		8874FA9C2383CB6000834E69 /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8874FA9B2383CB6000834E69 /* QuestionManager.swift */; };
+		88FF6104238BDB85006CFE8B /* QuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF6103238BDB85006CFE8B /* QuestionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		8874FA892382C18500834E69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8874FA8B2382C18500834E69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8874FA912382C20200834E69 /* Balham.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Balham.otf; sourceTree = "<group>"; };
+		8874FA972383C92E00834E69 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		8874FA992383C93D00834E69 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		8874FA9B2383CB6000834E69 /* QuestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
+		88FF6103238BDB85006CFE8B /* QuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 		8874FA7C2382C18500834E69 /* OpenQuizz */ = {
 			isa = PBXGroup;
 			children = (
+				8874FA8B2382C18500834E69 /* Info.plist */,
 				8874FA962383C42400834E69 /* Supporting Files */,
 				8874FA932383C3C400834E69 /* Model */,
 				8874FA942383C3D400834E69 /* View */,
@@ -69,6 +78,9 @@
 		8874FA932383C3C400834E69 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8874FA9B2383CB6000834E69 /* QuestionManager.swift */,
+				8874FA972383C92E00834E69 /* Question.swift */,
+				8874FA992383C93D00834E69 /* Game.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -76,6 +88,7 @@
 		8874FA942383C3D400834E69 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				88FF6103238BDB85006CFE8B /* QuestionsView.swift */,
 				8874FA832382C18500834E69 /* Main.storyboard */,
 			);
 			path = View;
@@ -97,7 +110,6 @@
 				8874FA912382C20200834E69 /* Balham.otf */,
 				8874FA862382C18500834E69 /* Assets.xcassets */,
 				8874FA882382C18500834E69 /* LaunchScreen.storyboard */,
-				8874FA8B2382C18500834E69 /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -175,8 +187,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8874FA822382C18500834E69 /* ViewController.swift in Sources */,
+				88FF6104238BDB85006CFE8B /* QuestionsView.swift in Sources */,
+				8874FA9A2383C93D00834E69 /* Game.swift in Sources */,
+				8874FA982383C92E00834E69 /* Question.swift in Sources */,
 				8874FA7E2382C18500834E69 /* AppDelegate.swift in Sources */,
 				8874FA802382C18500834E69 /* SceneDelegate.swift in Sources */,
+				8874FA9C2383CB6000834E69 /* QuestionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
