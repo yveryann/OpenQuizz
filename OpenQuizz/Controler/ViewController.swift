@@ -23,6 +23,9 @@ class ViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(questionsLoaded), name: name, object: nil)
         
         startNewGame()
+        
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(dragQuestionView(_:)))
+        questionView.addGestureRecognizer(panGestureRecognizer)
     }
     
     func questionsLoaded() {
@@ -48,5 +51,26 @@ class ViewController: UIViewController {
         game.refresh()
     }
     
+    func dragQuestionView(_ sender: UIPanGestureRecognizer) {
+        if game.state == .ongoing {
+        switch sender.state {
+        case .began, .changed:
+            transformeQuestionViewWith(gesture: sender)
+            case .cancelled, .ended:
+            answerQuestion()
+        default:
+            break
+            }
+        }
+    }
+    
+    private func transformeQuestionViewWith(gesture: UIPanGestureRecognizer) {
+        let translation = gesture.translation(in: questionView)
+        questionView.transform = CGAffineTransform(translationX: translation.x, y: translation.y)
+    }
+    
+    private func answerQuestion() {
+        
+    }
 }
 
